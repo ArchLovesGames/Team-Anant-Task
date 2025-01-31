@@ -79,18 +79,3 @@ uint8_t edit (uint8_t ind, uint8_t du, uint8_t dl, uint8_t u, uint8_t l)
     //returns the updated value after the final calculations are done
     return (u << 4) + l;
 }
-
-/* Explanation of the solution:
-My solution primarily revolves around the handling 
-of binary numbers using shifting and masking quite
-frequently. Since my scope of the subject is not 
-that well understood, my code uses a lot of shifting, 
-which makes it quite difficult to debug and understand, 
-for which I have tried to add comments where I have deemed 
-it necessary. I have taken great care to ensure 
-the logic in my code works correctly, checking for edge cases 
-and even creating a function to avoid redundancy.
-This task was quite difficult to approach as my idea of splitting 
-each digit into an array, while an optimal solution at first, quickly proved
-to be much more tedious and lengthy. With a little research, 
-I settled for this complex but nearly effective solution. */
