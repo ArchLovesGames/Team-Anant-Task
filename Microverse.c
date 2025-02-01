@@ -44,13 +44,13 @@ uint8_t edit (uint8_t ind, uint8_t du, uint8_t dl, uint8_t u, uint8_t l)
         //run loop for checking if data match
         for (int i = 0; i < 4; i++)
         {
-            if (((du >> (4-i-1)) & 0x01) == ((dl >> (4-i-1)) & 0x01))
+            if (((du >> (i)) & 0x01) == ((dl >> (i)) & 0x01))
             {
-                uint8_t a = (du >> (4-i-1)) & 0x01;
+                uint8_t a = (du >> (i)) & 0x01;
                 //edge case: both are 1, do nothing
-                if ((u >> (4-i-1))==1 && a == 1);
+                if ((u >> (i))==1 && a == 1);
                 else{
-                a =  (a << (4 - i - 1));
+                a =  (a << (i));
                 u = (u + a) & 0x0F; 
                 }
             }
@@ -63,14 +63,14 @@ uint8_t edit (uint8_t ind, uint8_t du, uint8_t dl, uint8_t u, uint8_t l)
         //run loop for checking if data match
         for (int i = 0; i < 4; i++)
         {
-            if (((du >> (4-i-1)) & 0x01) == ((dl >> (4-i-1)) & 0x01))
+            if (((du >> (i)) & 0x01) == ((dl >> (i)) & 0x01))
             {
-                uint8_t a = (du >> (4-i-1)) & 0x01;
+                uint8_t a = (du >> (i)) & 0x01;
                 //edge case: both are 1, do nothing
-                if ((l >> (4-i-1)) == 1 && a == 1);
+                if ((l >> (i)) == 1 && a == 1);
                 else 
                 {
-                a = (a << (4 - i - 1));
+                a = (a << (i));
                 l = (l + a) & 0x0F; 
                 }
             }
