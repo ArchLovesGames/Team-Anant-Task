@@ -1,4 +1,6 @@
 # Team-Anant-Task
+This is one of my favorite projects as this was the first ever program I wrote which solved a unique problem that hadn't been solved before
+
 Task for Team Anant
 
 The task we had been given was to solve a complicated decoding algorithm that constantly changes the space system's state via a 32-bit message with each bit serving as an indicator for the data change. 
